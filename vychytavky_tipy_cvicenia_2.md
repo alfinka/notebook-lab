@@ -1,9 +1,6 @@
 ## 📓 Gemini Notebook (NotebookLM) – vychytávky, tipy a praktické cvičenia (2. časť)
 
 **Praktický sprievodca pre mierne pokročilých používateľov**  
-**Autor:** Miroslav Reiter · **Projekt:** [notebook-lab](https://github.com/miroslav-reiter/notebook-lab) · **Aktualizácia:** 13. 10. 2026
-
-Tento materiál nadväzuje na [prvú časť – vychytávky, tipy a cvičenia](vychytavky_tipy_cvicenia.md). Zameriavame sa na ovládanie rozhrania Gemini Notebook, zástupné symboly v promptoch, Fast Research a Deep Research, poznámky, vodoznaky, overovanie pôvodu súborov, limity AI a interaktívne zvukové prehľady. Každá téma obsahuje konkrétny postup alebo úlohu vhodnú na praktické školenie.
 
 > [!IMPORTANT]
 > Gemini Notebook (predtým NotebookLM) pracuje predovšetkým s vybranými zdrojmi. **Odpoveď s citáciou ešte automaticky neznamená, že je fakticky správna.** Pri dôležitých tvrdeniach kontrolujeme pôvodný dokument, autora, dátum a konkrétnu citovanú pasáž.
@@ -912,89 +909,6 @@ Which finding should I remember first?
 
 **Pozor:** Audio Overview je generovaný AI a môže obsahovať faktické chyby, zmeny hlasov alebo zvukové artefakty. Pri podstatných údajoch sa vrátime k pôvodným dokumentom.
 
-<a id="kapitola-9"></a>
-## 9. Praktické cvičenia a hodnotenie
-
-Cvičenia môžeme realizovať jednotlivo alebo ako laboratórium. Pri každom chceme **konkrétny dôkaz o výsledku**, nie iba potvrdenie, že bol nástroj použitý.
-
-| Č. | Cvičenie | Zadanie | Kritérium splnenia |
-|---:|---|---|---|
-| 01 | Jazyk rozhrania | Prepni rozhranie EN/SK/CS a výstup nechaj po slovensky | Rozlíšené dve jazykové nastavenia |
-| 02 | Split View | Otvor Notebook a dokumentáciu vedľa seba | Dve stránky v jednom okne |
-| 03 | Knižnica promptov | Ulož a opätovne použi tri šablóny | Správne doplnené hodnoty |
-| 04 | Placeholdery | Vyplň univerzálny prompt | Nezostal nevyriešený placeholder |
-| 05 | Súhrn dokumentu | Spusť prompt 01 nad reálnym zdrojom | Súhrn s citáciami |
-| 06 | Porovnanie | Spusť prompt 03 nad dvoma dokumentmi | Tabuľka s rozdielmi a citáciami |
-| 07 | Test | Spusť prompt 05 | 15 otázok a kľúč |
-| 08 | Fast Research | Nájdi 10 zdrojov a vyber 5 | Vysvetlená selekcia |
-| 09 | Štítky | Rozdeľ 10 zdrojov podľa kvality a typu | Prehľadná organizácia |
-| 10 | Deep Research | Zadaj všeobecnú otázku | Zaznamenaná hĺbka výstupu |
-| 11 | Lepší Deep Research | Zadaj presnú otázku | Preukázané zlepšenie relevancie |
-| 12 | Kontrola citácií | Otvor 5 najdôležitejších citácií | Každé tvrdenie podporuje pasáž |
-| 13 | Poznámky | Ulož odpoveď a vytvor vlastnú poznámku | Rozlíšený spôsob editácie |
-| 14 | Konverzia poznámky | Over syntézu a jej použitie ako zdroja | Primárne zdroje zostali dohľadateľné |
-| 15 | SynthID | Skontroluj podporovaný testovací AI súbor | Správne vysvetlené hranice dôkazu |
-| 16 | C2PA a EXIF | Porovnaj záznam Content Credentials s metadátami | Rozlíšený podpis od EXIF |
-| 17 | Limity | Otvor Usage a zaznamenaj dostupnosť | Žiadny vymyslený limit |
-| 18 | Audio Overview | Vytvor Deep Dive a Debate | Porovnanie dvoch formátov |
-| 19 | Interactive Mode | Zapoj sa cez Join a polož otázku | Odpoveď v angličtine |
-| 20 | Záverečný audit | Skontroluj konečný výstup | Fakty, citácie a neistoty oddelené |
-
-### Hodnotiaca rubrika
-
-| Kritérium | Počet bodov |
-|---|---:|
-| Výber a kvalita zdrojov | 0–20 |
-| Presnosť promptu a doplnenie placeholderov | 0–20 |
-| Citácie a ich overenie v primárnych dokumentoch | 0–25 |
-| Kvalita praktického výstupu | 0–20 |
-| Identifikácia limitov, neistôt a rizík | 0–15 |
-| **Spolu** | **100** |
-
-**Odporúčaná hranica úspešnosti:** 70 bodov. Ide o návrh hodnotenia pre toto laboratórium, nie o pravidlo stanovené Google.
-
-### Záverečný kontrolný prompt
-
-~~~text
-Skontroluj moju doterajšiu odpoveď voči vybraným zdrojom.
-
-Vytvor tabuľku:
-Tvrdenie | Zdroj | Citovaná pasáž | Stav overenia | Čo opraviť.
-
-Použi kategórie:
-- priamo doložené,
-- čiastočne doložené,
-- interpretácia,
-- nepodložené.
-
-Neopravuj chýbajúce fakty domnienkou. Na konci vytvor
-zoznam otázok, ktoré treba ešte overiť v pôvodných zdrojoch.
-~~~
-
-<a id="kapitola-10"></a>
-## 10. Kontrolný zoznam, zdroje a odkazy
-
-### Pred odoslaním promptu skontrolujeme
-
-- [ ] Vybrali sme relevantné, aktuálne a oprávnene používané zdroje.
-- [ ] Všetky placeholdery sme nahradili konkrétnymi hodnotami.
-- [ ] Definovali sme úlohu, cieľovú skupinu, rozsah a formát.
-- [ ] Rozlíšili sme zdrojové fakty, interpretácie a návrhy.
-- [ ] Pri dôležitých tvrdeniach sme otvorili originálne citácie.
-- [ ] Nezamieňame vstavané funkcie Googlu s rozšírením Chrome.
-- [ ] Nezamieňame vypnutý viditeľný vodoznak s odstránením SynthID.
-- [ ] Berieme do úvahy regionálne, účtové a tarifné limity.
-
-### Východiskové podklady kurzu
-
-Tento súbor bol zostavený z troch sprievodných materiálov:
-
-1. **📓 NotebookLM Vychytávky Tipy.pdf** – 60-stranová prezentácia, ktorá určuje hlavné tematické celky, príklady a číslovanie vybraných cvičení.
-2. **obsahy.md** – pracovné poznámky a obsah školenia vrátane 15 promptov, príkladov Fast/Deep Research, klávesových skratiek a odkazov.
-3. **Praktické placeholdery.docx** – terminológia placeholderov, anglicko-slovenské dvojice a univerzálna šablóna.
-
-Pôvodné školiace podklady môžu zachytávať skoršie používateľské rozhranie. Tam, kde sa odlišujú od neskoršej dokumentácie produktu, v texte uvádzame aktuálne spresnenie.
-
 ### Oficiálna dokumentácia a užitočné nástroje
 
 | Zdroj | Odkaz | Použitie |
@@ -1026,4 +940,3 @@ Pôvodné školiace podklady môžu zachytávať skoršie používateľské rozh
 
 **Záver:** Pri práci s Gemini Notebook používame kombináciu **dobrých zdrojov, presných promptov, rozumne zvoleného režimu vyhľadávania a manuálnej kontroly dôkazov**. Samotný počet zdrojov, dĺžka odpovede ani prítomnosť citácií nie sú zárukou správneho výsledku.
 
-*Vzdelávací materiál VITA Academy · Miroslav Reiter · 13. 10. 2026.*
