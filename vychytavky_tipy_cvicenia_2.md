@@ -101,7 +101,7 @@ Skratky a dostupné funkcie overíme priamo v nainštalovanej verzii, pretože i
 **Placeholder** je zástupný text, ktorý pred odoslaním promptu nahradíme konkrétnou hodnotou. Najčastejšie používame zápis `[TÉMA]`, `[CIEĽOVÁ_SKUPINA]` alebo `[POČET_SLOV]`. Alternatívou sú zápisy `{TÉMA}` a `{{tema}}`. Ide o **techniku tvorby promptov, nie o vstavanú funkciu Gemini Notebook**: samotné hranaté alebo zložené zátvorky nezaručia automatické dosadzovanie údajov.
 
 > [!TIP]
-> V tomto dokumente používame štandardne **slovenské placeholdery v hranatých zátvorkách**. Pre školenie je vhodné najprv ukázať šablónu a potom predviesť jej vyplnenie na reálnych hodnotách.
+> V tomto dokumente používame štandardne **slovenské placeholdery v hranatých zátvorkách a zložených zátvorkách**. Pre školenie je vhodné najprv ukázať šablónu a potom predviesť jej vyplnenie na reálnych hodnotách.
 
 ### Základné placeholdery
 
