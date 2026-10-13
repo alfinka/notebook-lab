@@ -6,7 +6,7 @@
 > Gemini Notebook (predtým NotebookLM) pracuje predovšetkým s vybranými zdrojmi. **Odpoveď s citáciou ešte automaticky neznamená, že je fakticky správna.** Pri dôležitých tvrdeniach kontrolujeme pôvodný dokument, autora, dátum a konkrétnu citovanú pasáž.
 
 > [!NOTE]
-> Označenia funkcií, klávesové skratky doplnkov, tarifné limity a dostupnosť noviniek sa môžu meniť. Rozlišujeme **vstavané funkcie Googlu**, **funkcie prehliadača Chrome** a **možnosti rozšírení tretích strán**. Dokument bol zosúladený s verejne dostupnou dokumentáciou Googlu k uvedenému dátumu.
+> Označenia funkcií, klávesové skratky doplnkov, tarifné limity a dostupnosť noviniek sa môžu meniť. Rozlišujeme **vstavané funkcie Googlu**, **funkcie prehliadača Chrome** a **možnosti rozšírení tretích strán**. 
 
 ### Obsah
 
@@ -205,33 +205,28 @@ Nasledujúce šablóny vychádzajú z dodaného materiálu `obsahy.md` a použí
 ### Prompt 01 – Súhrn zdrojového dokumentu
 
 ~~~text
-Zhrň najdôležitejšie informácie zo zdroja [NÁZOV_ZDROJA]
-v rozsahu [POČET_SLOV] slov. Súhrn prispôsob cieľovej skupine
-[CIEĽOVÁ_SKUPINA] s úrovňou znalostí [ÚROVEŇ_ZNALOSTÍ].
+Zhrň najdôležitejšie informácie zo zdroja {{nazov_zdroja}} v rozsahu {{pocet_slov}} slov. Súhrn prispôsob cieľovej skupine {{cielova_skupina}} s úrovňou znalostí {{uroven_znalosti}}.
 
-Identifikuj hlavné myšlienky, kľúčové fakty, dôležité čísla,
-závery a odporúčania. Výstup rozdeľ na logické časti s nadpismi.
-Zásadné tvrdenia podlož citáciami. Chýbajúce informácie nevymýšľaj.
+Identifikuj hlavné myšlienky, kľúčové fakty, dôležité čísla, závery a odporúčania. Výsledok rozdeľ do logických častí s nadpismi.
+
+Používaj zrozumiteľný a odborný jazyk. Dôležité tvrdenia podlož citáciami z dokumentu. Nevymýšľaj informácie, ktoré zdroj neobsahuje.
 ~~~
 
 | Placeholder | Konkrétna hodnota |
 |---|---|
-| `[NÁZOV_ZDROJA]` | Oficiálna používateľská príručka Google NotebookLM |
-| `[POČET_SLOV]` | 300 |
-| `[CIEĽOVÁ_SKUPINA]` | Lektori, učitelia a pracovníci vo vzdelávaní |
-| `[ÚROVEŇ_ZNALOSTÍ]` | Mierne pokročilí |
+| `{{NÁZOV_ZDROJA}}` | Oficiálna používateľská príručka Google NotebookLM |
+| `{{POČET_SLOV}}` | 300 |
+| `{{CIEĽOVÁ_SKUPINA}}` | Lektori, učitelia a pracovníci vo vzdelávaní |
+| `{{ÚROVEŇ_ZNALOSTÍ}}` | Mierne pokročilí |
 
 **Výstup:** prehľadný súhrn vhodný na prípravu školenia.
 
 ### Prompt 02 – Kľúčové pojmy a definície
 
 ~~~text
-Na základe vybraných zdrojov identifikuj [POČET_POJMOV]
-najdôležitejších pojmov súvisiacich s témou [TÉMA].
+Na základe dostupných zdrojov identifikuj {{pocet_pojmov}} najdôležitejších odborných pojmov súvisiacich s témou {{tema}}.
 
-Každý pojem vysvetli pre skupinu [CIEĽOVÁ_SKUPINA].
-Doplň odbornú definíciu, jednoduché vysvetlenie, praktický
-príklad a súvisiace pojmy.
+Každý pojem vysvetli jednoducho a zrozumiteľne pre cieľovú skupinu {{cielova_skupina}}. Doplň jeho odbornú definíciu, praktický príklad použitia a prípadné súvisiace pojmy.
 
 Výsledok priprav ako tabuľku:
 Pojem | Definícia | Praktický príklad | Zdroj.
@@ -240,9 +235,9 @@ Použi len informácie podložené dostupnými zdrojmi.
 
 | Placeholder | Konkrétna hodnota |
 |---|---|
-| `[POČET_POJMOV]` | 15 |
-| `[TÉMA]` | Geografické informačné systémy (GIS), QGIS, ArcGIS a PostGIS |
-| `[CIEĽOVÁ_SKUPINA]` | Začínajúci GIS analytici a IT špecialisti |
+| `{{pocet_pojmov}}` | 15 |
+| `{{tema}}` | Geografické informačné systémy (GIS), QGIS, ArcGIS a PostGIS |
+| `{{cielova_skupina}}` | Začínajúci GIS analytici a IT špecialisti |
 
 **Výstup:** terminologický slovník s príkladmi.
 
