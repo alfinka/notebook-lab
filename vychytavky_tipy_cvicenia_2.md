@@ -18,8 +18,6 @@
 6. [Viditeľné vodoznaky, SynthID, C2PA a EXIF](#kapitola-6)
 7. [Používanie a limity umelej inteligencie](#kapitola-7)
 8. [Audio Overview a interaktívny režim](#kapitola-8)
-9. [Praktické cvičenia a hodnotenie](#kapitola-9)
-10. [Kontrolný zoznam, zdroje a odkazy](#kapitola-10)
 
 <a id="kapitola-1"></a>
 ## 1. Efektívne používanie rozhrania Gemini Notebook
